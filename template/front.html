@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>testing html5</title>
+</head>
+<body style="background:powderblue; color: magenta;font-size: 100%; text-align:center;">
+<h1 id="heading" title="heading">Start Search Now</h1>
+<br><br>
+<form method="get" action="https://www.google.com">
+<input id="inp1" type="text" name="searchBox1" style="width:600px;font-size:14pt;"><br>
+</form>
+
+
+<script>
+	function submitButton()
+	{
+		var query=document.getElementById("inp1").value;
+		query="index of "+query;
+		//document.getElementById("inp1").value=query;
+		query="https://www.google.com/search?q="+query;
+		window.open(query,"_self");
+		document.getElementById("heading").innerHTML="Searching...";
+	}
+
+	function open_google()
+	{
+		var query = document.getElementById("inp1").value;
+		query="https://www.google.com/search?q="+query;
+		window.open(query,"_self");
+	}
+
+	function open_duckduckgo()
+	{
+		var query = document.getElementById("inp1").value;
+		query="https://www.duckduckgo.com/search?q="+query;
+		window.open(query,"_self");
+	}
+
+	function open_bing()
+	{
+		var query = document.getElementById("inp1").value;
+		query="https://www.bing.com/search?q="+query;
+		window.open(query,"_self");
+	}
+</script>
+<br>
+<button onclick="open_google()" tittle="click to open google">GOOGLE</button>
+
+<button onclick="open_duckduckgo()" tittle="click to open google">DUCKDUCKGO</button>
+
+<button onclick="open_bing()" tittle="click to open google">BING</button>
+<br><br>
+<button onclick="submitButton()" title="Click to enter">DOWNLOAD</button>
+</body>
+</html>
